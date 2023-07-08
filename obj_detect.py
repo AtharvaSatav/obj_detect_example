@@ -31,3 +31,4 @@ if response.status_code == 200:
 
 else:
     print("Error occurred during object detection.")
+print("Code execution completed.")
