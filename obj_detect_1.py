@@ -1,4 +1,6 @@
 import requests
+import cv2
+import argparse
 
 # API endpoint URL
 api_url = "http://localhost:9900/obj_detect"
