@@ -4,7 +4,7 @@ import argparse
 import os
 
 api_url = "http://localhost:9900/obj_detect"
-image_path = "../../car.jpg"
+
 
 image = cv2.imread(car.jpg)
 retval,image_file = cv2.imencode('.jpg', image)
