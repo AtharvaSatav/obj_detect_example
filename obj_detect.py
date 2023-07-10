@@ -1,14 +1,16 @@
 import requests
 import cv2
 import argparse
+import os
 
 api_url = "http://localhost:9900/obj_detect"
-image_path = "../../car.jpg"
+image_path = os.path.join("brainypi-ai-api-examples", "sample_inputs", "images", "car.jpg")
 
 image = cv2.imread(image_path)
 retval,image_file = cv2.imencode('.jpg', image)
 if retval:
     encoded_image = image_file.tobytes()
+    print("encoded")
 else:
     print("Image encoding failed.")
 
@@ -30,5 +32,5 @@ if response.status_code == 200:
     cv2.waitKey(0)
 
 else:
-    print("Error occurred during object detection.")
+    print("Error: Response received from the server {}".format(response.status_code))
 print("Code execution completed.")
