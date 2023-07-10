@@ -1,3 +1,5 @@
+print("Code execution completed.")
+
 import requests
 import cv2
 import argparse
